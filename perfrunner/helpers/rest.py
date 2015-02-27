@@ -158,7 +158,7 @@ class RestHelper(object):
     def configure_auto_compaction(self, host_port, settings):
         logger.info('Applying auto-compaction settings: {}'.format(settings))
 
-        api = 'http://{}/controller/setAutoCompaction'.format(host_port)
+        api = 'http://{}/controller/setAutoCompaction'.format(host_port)'
         data = {
             'databaseFragmentationThreshold[percentage]': settings.db_percentage,
             'viewFragmentationThreshold[percentage]': settings.view_percentage,
